@@ -1,0 +1,27 @@
+<!-- views/index.ejs -->
+<html>
+  <head><title>Assignment Tracker</title></head>
+  <body>
+    <h1>Assignments</h1>
+    <ul>
+      <% assignments.forEach(assignment => { %>
+        <li>
+          <strong><%= assignment.title %></strong> - <%= assignment.dueDate.toDateString() %>
+          <a href="/assignments/<%= assignment._id %>/edit">Edit</a>
+          <form action="/assignments/<%= assignment._id %>/delete" method="POST" style="display:inline;">
+            <button type="submit">Delete</button>
+          </form>
+        </li>
+      <% }) %>
+    </ul>
+    <a href="/assignments/new">Add New Assignment</a>
+
+
+    <form action="/assignments/<%= assignment._id %>/delete" method="POST" onsubmit="return confirm('Are you sure you want to delete this assignment?');" style="display:inline;">
+  <button type="submit">Delete</button>
+</form>
+
+
+
+  </body>
+</html>
