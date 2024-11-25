@@ -1,0 +1,37 @@
+<% include ../Partials/header.ejs%>
+<% include ../Partials/main_nav.ejs%>
+
+<!-- Content for Edit Page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="nameTextField">Your Name</label>
+                    <input type="text" class="form-control" id="nameTextField"
+                    placeholder="Enter Your Name" name="Name" value='<%= Incident.Name %>' required>
+                </div>
+                <div class="form-group">
+                    <label for="timeTextField">Time of Incident</label>
+                    <input type="text" class="form-control" id="timeTextField"
+                    placeholder="Enter Incident Time" name="Time" value='<%= Incident.Time %>' required>
+                </div>
+                <div class="form-group">
+                    <label for="locationTextField">Location of Incident</label>
+                    <input type="text" class="form-control" id="locationTextField"
+                    placeholder="Enter Incident Location" name="Location" value='<%= Incident.Location %>' required>
+                </div>
+                <div class="form-group">
+                    <label for="descriptionTextArea">Incident Description</label>
+                    <textarea type="text" class="form-control" id="descriptionTextArea"
+                    placeholder="Enter Incident Description" name="Description" required><%= Incident.Description %></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit <i class="fas fa-edit"></i></button>
+                <button class="btn btn-warning" onclick="window.history.back()">Cancel <i class="fas fa-undo"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ../Partials/footer.ejs%>
