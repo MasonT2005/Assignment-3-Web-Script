@@ -1,34 +1,31 @@
 <% include ../Partials/header.ejs%>
 <% include ../Partials/main_nav.ejs%>
-    <!-- Incident Database -->
+    <!--Database -->
     <main class = "container">
         <div class = "row">
             <div class = "offset-md-1 col-md-10">
                 <h1><%= title %></h1>
                 <br>
-                <a href="/incidentslist/add" class="btn btn-primary" role="button">
-                    <i class="fas fa-plus-circle"></i> Add Incident</a>
+                <a href="/assignmentslist/add" class="btn btn-primary" role="button">
+                    <i class="fas fa-plus-circle"></i> Add Assignment</a>
                 <table class="table table-bordered table-striped table-hover">
                     <tr class="d-flex">
                         <th class="text-center col-2">Name</th>
                         <th class="text-center col-2">Time</th>
-                        <th class="text-center col-2">Location</th>
-                        <th class="text-center col-4">Description</th>
+
                     </tr>
                     <% for(let count=0;count<AssignmentList.length;count++) { %>
                     <tr class="d-flex">
                         <td class="text-center col-2"><%= AssignmentList[count].Name %></td>
                         <td class="text-center col-2"><%= AssignmentList[count].Time %></td>
-                        <td class="text-center col-2"><%= AssignmentList[count].Location %></td>
-                        <td class="col-4"><%= AssignmentList[count].Description %></td>
                         <td class="text-center col-1">
-                            <a href="/incidentslist/edit/<%= AssignmentList[count]._id%>"
+                            <a href="/assignmentslist/edit/<%= AssignmentList[count]._id%>"
                                 class="btn btn-primary btn-sm">
                                 <i class="fas fa-pencil-alt"></i> Edit
                             </a>
                         </td>
                         <td class="text-center col-1">
-                            <a href="/incidentslist/delete/<%= AssignmentList[count]._id%>"
+                            <a href="/assignmentslist/delete/<%= AssignmentList[count]._id%>"
                                 class="btn btn-danger btn-sm">
                                 <i class="fas fa-trash-alt"></i> Delete
                             </a>

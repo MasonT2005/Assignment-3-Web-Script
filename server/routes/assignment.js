@@ -5,13 +5,13 @@ let mongoose = require('mongoose')
 let Assignment = require('../model/assignment.js');
 const assignment = require('../model/assignment.js');
 let assignmentController = require('../controllers/assignment.js')
-/* get route for the incident list - Read Operation */
+/* get route for the assignment list - Read Operation */
 
 
 
 router.get('/',async(req,res,next)=>{
 try{
-    const AssignmentList = await Incident.find();
+    const AssignmentList = await Assignment.find();
     res.render('Assignment/list',{
         title:'Assignment',
         AssignmentList:AssignmentList

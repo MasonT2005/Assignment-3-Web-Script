@@ -26,11 +26,7 @@ mongoDB.once('open', ()=>{
 });
 /*main().catch(err => console.log(err));
 
-async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/Incidents');
-  // await mongoose.connect('mongodb+srv://masontran:Macibelle2013@cluster0.u9sqp.mongodb.net/');
-
- */
+*/
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -41,7 +37,7 @@ app.use(express.static(path.join(__dirname, '../../node_modules')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/incidentslist', assignmentRouter);
+app.use('/assignmentslist', assignmentRouter);
 // /project --> projectrouter
 // /contactus --> contactus
 
