@@ -1,18 +1,80 @@
 /* public/styles/style.css */
+
+/* Set the background color of the entire page */
 body {
-  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;  /* Light blue background */
+  font-family: Arial, sans-serif; /* Use a clean font */
+  color: rgba(228, 228, 73, 0.2);  /* Set text color */
+  margin: 0;  /* Remove default margin */
+  padding: 0;  /* Remove default padding */
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
-footer {
-  background-color: #f1f1f1;
-  padding: 10px 0;
-  margin-top: 30px;
-}
-
+/* Set the container for content with a max width and centered */
 .container {
-  max-width: 800px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for headings */
+h1, h2, h3 {
+  color: #333;
+  font-weight: 700;  /* Bold headings */
+  margin-bottom: 15px;
+}
+
+/* Style for links inside the navbar */
+nav a {
+  color: #007bff; /* Bootstrap link color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Set hover effect for links */
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Customize buttons */
+.btn {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: blueviolet; /* Lighter blue when hovered */
+}
+
+/* List group for assignments */
+.list-group-item {
+  border: 1px solid #ddd; /* Light border for list items */
+  border-radius: 5px; 
+  margin-bottom: 10px;
+}
+
+/* Styling for completed assignments */
+.badge-success {
+  background-color: #28a745;  /* Green background for completed assignments */
+  padding: 5px;
+  border-radius: 3px;
+}
+
+/* Styling for pending assignments */
+.badge-warning {
+  background-color: #ffc107;  /* Yellow background for pending assignments */
+  padding: 5px;
+  border-radius: 3px;
+}
+
+/* Footer styling */
+footer {
+  background-color: #f8f9fa; /* Light gray footer */
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
